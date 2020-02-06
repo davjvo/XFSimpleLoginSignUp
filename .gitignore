@@ -1,0 +1,8 @@
+SimpleRegisterAndLogin/bin/*
+SimpleRegisterAndLogin/obj/*
+
+SimpleRegisterAndLogin.Android/bin/*
+SimpleRegisterAndLogin.Android/obj/*
+
+SimpleRegisterAndLogin.iOS/bin/*
+SimpleRegisterAndLogin.iOS/obj/*
