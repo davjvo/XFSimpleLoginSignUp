@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SimpleRegisterAndLogin.Views.DiscoveryPage"
+        xmlns:controls="clr-namespace:SimpleRegisterAndLogin.Controls" 
+    >
+    <ScrollView>
+        <Grid
+            RowSpacing="40"
+            ColumnSpacing="35"   
+            Padding="25"
+        >
+            <controls:CardView 
+                Grid.Column="0"
+                Grid.Row="0"
+                CardTitle="Bars &amp; Hotels"
+                CardSubTitle="42 Places"
+                CardIcon="beer"
+            />
+            <controls:CardView 
+                Grid.Column="1"
+                Grid.Row="0"
+                CardTitle="Fine Dinning"
+                CardSubTitle="15 Places"
+                CardIcon="serve"
+            />
+            <controls:CardView 
+                Grid.Column="0"
+                Grid.Row="1"
+                CardTitle="Cafes"
+                CardSubTitle="28 Places"
+                CardIcon="coffee"
+            />
+            <controls:CardView 
+                Grid.Column="1"
+                Grid.Row="1"
+                CardTitle="Nearby"
+                CardSubTitle="34 Places"
+                CardIcon="nearby"
+            />
+            <controls:CardView 
+                Grid.Column="0"
+                Grid.Row="2"
+                CardTitle="Fast Foods"
+                CardSubTitle="29 Places"
+                CardIcon="burger"
+            />
+            <controls:CardView 
+                Grid.Column="1"
+                Grid.Row="2"
+                CardTitle="Featured"
+                CardSubTitle="21 Places"
+                CardIcon="food"
+            />
+        </Grid>
+    </ScrollView>
+</ContentPage>

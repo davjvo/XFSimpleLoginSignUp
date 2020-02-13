@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="SimpleRegisterAndLogin.Views.SignUpPage">
+<ContentPage 
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="SimpleRegisterAndLogin.Views.SignUpPage"
+    >
     <ScrollView>
         <Grid Padding="30" RowSpacing="5">
             <Grid.RowDefinitions>
@@ -17,7 +19,6 @@
                 <RowDefinition Height="70" />
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="72" />
                 <ColumnDefinition Width="48" />
@@ -25,42 +26,83 @@
                 <ColumnDefinition Width="32" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-               FontSize="Title" FontAttributes="Bold" 
-               TextColor="Black" Text="Sign up" 
-               VerticalTextAlignment="Center" />
-            <Label Grid.Row="0" Grid.Column="1"
-               Grid.ColumnSpan="2"
-               TextColor="#D9D9D9" Text="Login"
-               HorizontalTextAlignment="End" 
-               VerticalTextAlignment="Center"
-               FontSize="Subtitle"/>
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="3"
+                Text="Sign up" 
+                Style="{StaticResource LabelTitle}"
+            />
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Text="Login"
+                Style="{StaticResource LabelSubTitle}"
+                HorizontalTextAlignment="End" 
+                VerticalTextAlignment="Center"
+            />
 
-            <Image Source="camara" Grid.Row="1" Grid.ColumnSpan="4" />
+            <Image 
+                Grid.Row="1" 
+                Grid.ColumnSpan="4"
+                Source="camara"  
+            />
 
-            <Entry Grid.Row="2" Grid.ColumnSpan="4" Placeholder="Email address" />
-            <Entry Grid.Row="3" Grid.ColumnSpan="4" Placeholder="Username"  />
-            <Entry Grid.Row="4" Grid.ColumnSpan="4" Placeholder="Password" />
-            <Image Grid.Row="4" Grid.Column="3" Source="eye" />
-            <Entry Grid.Row="5" Grid.ColumnSpan="4" Placeholder="Repeat password" />
-            <Image Grid.Row="5" Grid.Column="3" Source="eye" />
+            <Entry 
+                Grid.Row="2" 
+                Grid.ColumnSpan="4" 
+                x:Name="Email" 
+                Placeholder="Email address" 
+            />
+            <Entry 
+                x:Name="UserName" 
+                Grid.Row="3" 
+                Grid.ColumnSpan="4" 
+                Placeholder="Username" 
+            />
+            <Entry 
+                x:Name="Password" 
+                Grid.Row="4" 
+                Grid.ColumnSpan="4" 
+                Placeholder="Password" 
+             />
+            <Image 
+                Grid.Row="4" 
+                Grid.Column="3" 
+                Source="eye" 
+            />
+            <Entry 
+                x:Name="PasswordRepeat" 
+                Grid.Row="5" 
+                Grid.ColumnSpan="4" 
+                Placeholder="Repeat password" 
+            />
+            <Image 
+                Grid.Row="5" 
+                Grid.Column="3" 
+                Source="eye" 
+            />
 
             <Button 
-            Text="SIGN UP" FontSize="Title" 
-            Padding="20"
-            FontAttributes="Bold"
-            TextColor="#415190"
-            BackgroundColor="Transparent"
-            Grid.Row="6" Grid.ColumnSpan="4"
-            CornerRadius="35"
-            BorderColor="#415190"
-            BorderWidth="2"
-        />
-            <Image Grid.Row="6" Grid.Column="1" Source="check" />
+                Text="SIGN UP" 
+                Grid.Row="6" Grid.ColumnSpan="4"
+                Pressed="ButtonSingUp_TappedHandler"
+                Style="{StaticResource ButtonRound}"
+            />
+            <Image 
+                Grid.Row="6" 
+                Grid.Column="1" 
+                Source="check" 
+            />
 
-            <Label Text="Terms of Service" Grid.Row="7" Grid.ColumnSpan="4" 
-               TextColor="#D9D9D9" 
-               VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            <Label 
+                Grid.Row="7" 
+                Grid.ColumnSpan="4" 
+                Text="Terms of Service" 
+                VerticalTextAlignment="Center" 
+                HorizontalTextAlignment="Center" 
+            />
 
         </Grid>
     </ScrollView>

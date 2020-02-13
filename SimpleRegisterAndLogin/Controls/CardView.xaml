@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="SimpleRegisterAndLogin.Controls.CardView"
+        x:Name="this"
+    >
+    <Frame BindingContext="{x:Reference this}"
+           CornerRadius="5"
+           HasShadow="True"
+           Padding="20">
+        <StackLayout>
+            <Image 
+                Source="{Binding CardIcon, FallbackValue='location'}"
+                WidthRequest="60"
+                HeightRequest="60"
+                Aspect="AspectFit" 
+            />
+            <Label 
+                Text="{Binding CardTitle, FallbackValue='Card Title'}"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource LabelTitle}"
+            />
+            <Label 
+                Text="{Binding CardSubTitle, FallbackValue='Card description text.'}"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource LabelSubTitle}"
+            />
+
+        </StackLayout>
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="MainFrame_TapHandler" />
+        </Frame.GestureRecognizers>
+    </Frame>
+</ContentView>

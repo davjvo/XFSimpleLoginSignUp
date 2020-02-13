@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,35 @@ namespace SimpleRegisterAndLogin.Views
         public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private async void LabelSignUp_TappedHandler(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SignUpPage());
+        }
+
+        private async void ButtonLogin_TappedHandler(object sender, EventArgs e)
+        {
+            string message = "";
+
+            if (string.IsNullOrEmpty(UserName.Text))
+            {
+                message = string.Concat(message, "UserName or Email is required.");
+            }
+
+            if (string.IsNullOrEmpty(Password.Text))
+            {
+                message = string.Concat(message, "\nPassword is required.");
+            }
+
+            if (!string.IsNullOrEmpty(message))
+            {
+                await DisplayAlert("Alert!", message, "Ok");
+            }
+            else
+            {
+                Application.Current.MainPage =  new MainTabsPage();
+            }
         }
     }
 }

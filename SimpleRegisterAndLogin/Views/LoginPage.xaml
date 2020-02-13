@@ -17,7 +17,6 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="72" />
                 <ColumnDefinition Width="48" />
@@ -25,53 +24,99 @@
                 <ColumnDefinition Width="32" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
-               FontSize="Title" FontAttributes="Bold" 
-               TextColor="Black" Text="Login" 
-               VerticalTextAlignment="Center" />
-            <Label Grid.Row="0" Grid.Column="1"
-               Grid.ColumnSpan="2"
-               TextColor="#D9D9D9" Text="Sign up"
-               HorizontalTextAlignment="End" 
-               VerticalTextAlignment="Center"
-               FontSize="Subtitle"/>
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="3"
+                Text="Login"
+                Style="{StaticResource LabelTitle}"
+            />
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Text="Sign up"
+                Style="{StaticResource LabelSubTitle}"
+                HorizontalTextAlignment="End" 
+                VerticalTextAlignment="Center"
+            />
 
-            <Image Source="User" Grid.Row="1" Grid.ColumnSpan="4"  />
+            <Image 
+                Source="User" 
+                Grid.Row="1" 
+                Grid.ColumnSpan="4"  
+            />
 
-            <Entry Grid.Row="2" Grid.ColumnSpan="4" PlaceholderColor="#D9D9D9" 
-                   Placeholder="Username or email address" />
+            <Entry 
+                x:Name="UserName" 
+                Grid.Row="2" 
+                Grid.ColumnSpan="4"
+                Placeholder="Username or email address" 
+                Style="{StaticResource Entry}"
+            />
 
-            <Entry Grid.Row="3" Grid.ColumnSpan="4" PlaceholderColor="#D9D9D9" 
-                   Placeholder="Password"  />
+            <Entry 
+                x:Name="Password" 
+                Grid.Row="3" 
+                Grid.ColumnSpan="4" 
+                Style="{StaticResource Entry}"
+                Placeholder="Password"  
+            />
 
-            <Image Grid.Row="3" Grid.Column="3" Source="eye"
+            <Image 
+                Grid.Row="3" 
+                Grid.Column="3" 
+                Source="eye"
             />
 
             <Button 
-            Text="LOG IN" FontSize="Title" 
-            Padding="20"
-            FontAttributes="Bold"
-            TextColor="#415190"
-            BackgroundColor="Transparent"
-            Grid.Row="4" Grid.ColumnSpan="4"
-            CornerRadius="35"
-            BorderColor="#415190"
-            BorderWidth="2"
-        />
+                Text="LOG IN"
+                Grid.Row="4" Grid.ColumnSpan="4"
+                Pressed="ButtonLogin_TappedHandler"
+                Style="{StaticResource ButtonRound}"
+            />
 
-            <Image Grid.Row="4" Grid.Column="1" Source="check" />
+            <Image 
+                Grid.Row="4" 
+                Grid.Column="1" 
+                Source="check" 
+            />
 
-            <Image Grid.Row="5" Grid.Column="3" Source="world" />
+            <Image 
+                Grid.Row="5" 
+                Grid.Column="3" 
+                Source="world" 
+            />
 
-            <Label Grid.Row="6" Grid.ColumnSpan="4" Text="Login with"
-               HorizontalTextAlignment="Center" VerticalTextAlignment="End"
-               TextColor="#D9D9D9" FontSize="Subtitle" />
+            <Label 
+                Grid.Row="6" 
+                Grid.ColumnSpan="4" 
+                Text="Login with"
+                HorizontalTextAlignment="Center" 
+                VerticalTextAlignment="End" 
+                Style="{StaticResource LabelSubTitle}"
+            />
 
-            <Grid Grid.Row="7" Grid.ColumnSpan="4" Padding="0,25">
-                <Image Source="googleplus" Grid.Column="0" />
-                <Image Source="github" Grid.Column="1"  />
-                <Image Source="twitter" Grid.Column="2" />
-                <Image Source="facebook" Grid.Column="3" />
+            <Grid 
+                Grid.Row="7" 
+                Grid.ColumnSpan="4" 
+                Padding="0,25"
+            >
+                <Image 
+                    Source="googleplus" 
+                    Grid.Column="0" />
+                <Image 
+                    Source="github" 
+                    Grid.Column="1"  
+                />
+                <Image 
+                    Source="twitter" 
+                    Grid.Column="2" 
+                />
+                <Image 
+                    Source="facebook" 
+                    Grid.Column="3" 
+                />
             </Grid>
         </Grid>
     </ScrollView>
