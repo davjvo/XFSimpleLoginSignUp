@@ -18,21 +18,21 @@ namespace SimpleRegisterAndLogin.Views
 
             if (string.IsNullOrEmpty(Email.Text))
             {
-                message = string.Concat(message, "Email is required.");
+                message = "Email required.";
             }
 
             if (string.IsNullOrEmpty(UserName.Text))
             {
-                message = string.Concat(message, "\nUserName is required.");
+                message = $"{message} \nUserName required.";
             }
 
             if (string.IsNullOrEmpty(Password.Text) || string.IsNullOrEmpty(PasswordRepeat.Text))
             {
-                message = string.Concat(message, "\nPassword is required.");
+                message = $"{message} \nPassword required.";
             }
             else if(!Password.Text.Equals(PasswordRepeat.Text))
             {
-                message = string.Concat(message, "\nThe passwords most be the same.");
+                message = $"{message} \nThe passwords most be the same.";
             }
 
             if (!string.IsNullOrEmpty(message))

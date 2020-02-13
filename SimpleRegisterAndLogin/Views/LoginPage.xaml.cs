@@ -23,12 +23,12 @@ namespace SimpleRegisterAndLogin.Views
 
             if (string.IsNullOrEmpty(UserName.Text))
             {
-                message = string.Concat(message, "UserName or Email is required.");
+                message = "UserName or Email is required.";
             }
 
             if (string.IsNullOrEmpty(Password.Text))
             {
-                message = string.Concat(message, "\nPassword is required.");
+                message = $"{message} \nPassword is required.";
             }
 
             if (!string.IsNullOrEmpty(message))
