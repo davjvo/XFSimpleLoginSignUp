@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SimpleRegisterAndLogin.Controls
@@ -18,6 +19,10 @@ namespace SimpleRegisterAndLogin.Controls
             nameof(CardIcon), typeof(ImageSource), typeof(CardView), default(ImageSource)
         );
 
+        public static readonly BindableProperty TouchedCommandProperty = BindableProperty.Create(
+            nameof(TouchedCommand), typeof(ICommand), typeof(CardView), null
+        );
+
         public string CardTitle
         {
             get => (string)GetValue(CardTitleProperty);
@@ -33,6 +38,12 @@ namespace SimpleRegisterAndLogin.Controls
             get => (ImageSource)GetValue(CardIconProperty);
             set => SetValue(CardIconProperty, value);
         }
+        public ICommand TouchedCommand
+        {
+            get => (ICommand)GetValue(TouchedCommandProperty);
+            set => SetValue(TouchedCommandProperty, value);
+        }
+
         public CardView()
         {
             InitializeComponent();

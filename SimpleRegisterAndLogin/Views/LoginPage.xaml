@@ -31,6 +31,7 @@
                 Text="Login"
                 Style="{StaticResource LabelTitle}"
             />
+
             <Label 
                 Grid.Row="0" 
                 Grid.Column="1"
@@ -38,8 +39,11 @@
                 Text="Sign up"
                 Style="{StaticResource LabelSubTitle}"
                 HorizontalTextAlignment="End" 
-                VerticalTextAlignment="Center"
-            />
+                VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SignUpCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
 
             <Image 
                 Source="User" 
@@ -48,17 +52,18 @@
             />
 
             <Entry 
-                x:Name="UserName" 
                 Grid.Row="2" 
                 Grid.ColumnSpan="4"
                 Placeholder="Username or email address" 
+                Text="{Binding UserName}"
                 Style="{StaticResource Entry}"
             />
 
             <Entry 
-                x:Name="Password" 
+                IsPassword="True"
                 Grid.Row="3" 
                 Grid.ColumnSpan="4" 
+                Text="{Binding Password}"
                 Style="{StaticResource Entry}"
                 Placeholder="Password"  
             />
@@ -72,7 +77,7 @@
             <Button 
                 Text="LOG IN"
                 Grid.Row="4" Grid.ColumnSpan="4"
-                Pressed="ButtonLogin_TappedHandler"
+                Command="{Binding LoginCommand}"
                 Style="{StaticResource ButtonRound}"
             />
 

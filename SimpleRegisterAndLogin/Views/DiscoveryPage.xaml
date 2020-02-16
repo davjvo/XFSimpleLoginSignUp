@@ -20,6 +20,7 @@
                 CardTitle="Bars &amp; Hotels"
                 CardSubTitle="42 Places"
                 CardIcon="beer"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
             <controls:CardView 
                 Grid.Column="1"
@@ -27,6 +28,7 @@
                 CardTitle="Fine Dinning"
                 CardSubTitle="15 Places"
                 CardIcon="serve"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
             <controls:CardView 
                 Grid.Column="0"
@@ -34,6 +36,7 @@
                 CardTitle="Cafes"
                 CardSubTitle="28 Places"
                 CardIcon="coffee"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
             <controls:CardView 
                 Grid.Column="1"
@@ -41,6 +44,7 @@
                 CardTitle="Nearby"
                 CardSubTitle="34 Places"
                 CardIcon="nearby"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
             <controls:CardView 
                 Grid.Column="0"
@@ -48,6 +52,7 @@
                 CardTitle="Fast Foods"
                 CardSubTitle="29 Places"
                 CardIcon="burger"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
             <controls:CardView 
                 Grid.Column="1"
@@ -55,6 +60,7 @@
                 CardTitle="Featured"
                 CardSubTitle="21 Places"
                 CardIcon="food"
+                TouchedCommand="{Binding CardViewSelectedCommand}"
             />
         </Grid>
     </ScrollView>

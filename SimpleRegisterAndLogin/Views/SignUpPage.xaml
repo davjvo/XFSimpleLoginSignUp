@@ -52,20 +52,21 @@
             <Entry 
                 Grid.Row="2" 
                 Grid.ColumnSpan="4" 
-                x:Name="Email" 
                 Placeholder="Email address" 
+                Text="{Binding Email}"
             />
             <Entry 
-                x:Name="UserName" 
                 Grid.Row="3" 
                 Grid.ColumnSpan="4" 
+                Text="{Binding UserName}"
                 Placeholder="Username" 
             />
             <Entry 
-                x:Name="Password" 
                 Grid.Row="4" 
                 Grid.ColumnSpan="4" 
+                Text="{Binding Password}"
                 Placeholder="Password" 
+                IsPassword="True"
              />
             <Image 
                 Grid.Row="4" 
@@ -73,10 +74,11 @@
                 Source="eye" 
             />
             <Entry 
-                x:Name="PasswordRepeat" 
                 Grid.Row="5" 
                 Grid.ColumnSpan="4" 
+                Text="{Binding PasswordRepeat}"
                 Placeholder="Repeat password" 
+                IsPassword="True"
             />
             <Image 
                 Grid.Row="5" 
@@ -87,7 +89,7 @@
             <Button 
                 Text="SIGN UP" 
                 Grid.Row="6" Grid.ColumnSpan="4"
-                Pressed="ButtonSingUp_TappedHandler"
+                Command="{Binding SignUpCommand}"
                 Style="{StaticResource ButtonRound}"
             />
             <Image 
