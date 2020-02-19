@@ -7,21 +7,20 @@ namespace SimpleRegisterAndLogin.ViewModels
 {
     public class DiscoveryPageViewModel
     {
-        public CardView LastElementTouched { get; set; }
-        public ICommand CardViewSelectedCommand { get; set; }
+        public Frame LastElementTouched { get; set; }
 
-        public DiscoveryPageViewModel()
+        public ICommand CardViewSelectedCommand =>
+                    new Command<Frame>((elementTouched) => ChangeBackgroundColor(elementTouched));
+
+        private void ChangeBackgroundColor(Frame elementTouched)
         {
-            CardViewSelectedCommand = new Command<CardView>((CardView elementTouched) =>
+            if (LastElementTouched != null)
             {
-                if (LastElementTouched != null)
-                {
-                    LastElementTouched.BackgroundColor = Color.White;
-                }
+                LastElementTouched.BackgroundColor = Color.White;
+            }
 
-                elementTouched.BackgroundColor = Color.FromHex("#415190");
-                LastElementTouched = elementTouched;
-            });
+            elementTouched.BackgroundColor = Color.FromHex("#415190");
+            LastElementTouched = elementTouched;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -47,18 +48,6 @@ namespace SimpleRegisterAndLogin.Controls
         public CardView()
         {
             InitializeComponent();
-        }
-
-        private void MainFrame_TapHandler(object sender, System.EventArgs e)
-        {
-            var frame = (Frame)sender;
-            frame.BackgroundColor = Color.FromHex("#415190");
-            Device.StartTimer(System.TimeSpan.FromSeconds(.1), () =>
-            {
-                frame.BackgroundColor = Color.White;
-                return false;
-            });
-
         }
     }
 }

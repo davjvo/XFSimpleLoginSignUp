@@ -26,10 +26,9 @@
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource LabelSubTitle}"
             />
-
         </StackLayout>
         <Frame.GestureRecognizers>
-            <TapGestureRecognizer Tapped="MainFrame_TapHandler" />
+            <TapGestureRecognizer Command="{Binding Path=TouchedCommand, Source={x:Reference this}}" CommandParameter="{Binding Path=Content}" />
         </Frame.GestureRecognizers>
     </Frame>
 </ContentView>
