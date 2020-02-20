@@ -12,6 +12,13 @@ namespace SimpleRegisterAndLogin.ViewModels
         public string Password { get; set; }
         public string PasswordRepeat { get; set; }
         public bool HidePassword { get; set; }
+        public string EyeIcon
+        {
+            get
+            {
+                return HidePassword ? "eye" : "eyeHidden";
+            }
+        }
         public ICommand SignUpCommand =>
             new Command(SignUp);
         public ICommand ShowPasswordCommand =>

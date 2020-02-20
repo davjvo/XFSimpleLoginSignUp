@@ -207,4 +207,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\bookmark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eyeHidden.png" />
+  </ItemGroup>
 </Project>

@@ -71,7 +71,7 @@
             <Image 
                 Grid.Row="4" 
                 Grid.Column="3" 
-                Source="eye" >
+                Source="{Binding EyeIcon}">
 
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ShowPasswordCommand}" />
@@ -87,7 +87,7 @@
             <Image 
                 Grid.Row="5" 
                 Grid.Column="3" 
-                Source="eye" >
+                Source="{Binding EyeIcon}" >
 
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ShowPasswordCommand}" />
