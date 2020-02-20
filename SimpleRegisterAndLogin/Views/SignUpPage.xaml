@@ -66,25 +66,33 @@
                 Grid.ColumnSpan="4" 
                 Text="{Binding Password}"
                 Placeholder="Password" 
-                IsPassword="True"
+                IsPassword="{Binding HidePassword}"
              />
             <Image 
                 Grid.Row="4" 
                 Grid.Column="3" 
-                Source="eye" 
-            />
+                Source="eye" >
+
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowPasswordCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
             <Entry 
                 Grid.Row="5" 
                 Grid.ColumnSpan="4" 
                 Text="{Binding PasswordRepeat}"
                 Placeholder="Repeat password" 
-                IsPassword="True"
+                IsPassword="{Binding HidePassword}"
             />
             <Image 
                 Grid.Row="5" 
                 Grid.Column="3" 
-                Source="eye" 
-            />
+                Source="eye" >
+
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowPasswordCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
 
             <Button 
                 Text="SIGN UP" 

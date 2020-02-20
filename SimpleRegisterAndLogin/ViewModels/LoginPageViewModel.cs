@@ -1,20 +1,28 @@
 ﻿using SimpleRegisterAndLogin.Views;
+using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace SimpleRegisterAndLogin.ViewModels
 {
-    public class LoginPageViewModel
+    public class LoginPageViewModel : INotifyPropertyChanged
     {
         public string UserName { get; set; }
         public string Password { get; set; }
-        public ICommand LoginCommand { get; set; }
-        public ICommand SignUpCommand { get; set; }
+        public bool HidePassword { get; set; }
+        public ICommand LoginCommand =>
+            new Command(Login);
+        public ICommand SignUpCommand =>
+            new Command(NavigateSignUp);
+        public ICommand ShowPasswordCommand =>
+            new Command(HidePasswordChange);
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public LoginPageViewModel()
         {
-            LoginCommand = new Command(Login);
-            SignUpCommand = new Command(NavigateSignUp);
+            HidePassword = true;
         }
 
         public async void Login()
@@ -44,6 +52,11 @@ namespace SimpleRegisterAndLogin.ViewModels
         public async void NavigateSignUp()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new SignUpPage());
+        }
+
+        public void HidePasswordChange()
+        {
+            HidePassword = !HidePassword;
         }
     }
 }

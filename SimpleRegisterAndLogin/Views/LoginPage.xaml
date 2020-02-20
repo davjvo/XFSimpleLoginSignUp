@@ -60,19 +60,23 @@
             />
 
             <Entry 
-                IsPassword="True"
+                IsPassword="{Binding HidePassword}"
                 Grid.Row="3" 
                 Grid.ColumnSpan="4" 
                 Text="{Binding Password}"
                 Style="{StaticResource Entry}"
                 Placeholder="Password"  
-            />
+                />
 
             <Image 
                 Grid.Row="3" 
                 Grid.Column="3" 
-                Source="eye"
-            />
+                Source="eye">
+
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowPasswordCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
 
             <Button 
                 Text="LOG IN"
